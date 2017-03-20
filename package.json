@@ -1,0 +1,25 @@
+{
+  "name": "minor-funda-ss",
+  "version": "1.0.0",
+  "description": "My original Funda app converted to server side",
+  "main": "server.js",
+  "scripts": {
+    "nodemon": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhafkamp/minor-funda-ss.git"
+  },
+  "author": "Luuk Hafkamp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lhafkamp/minor-funda-ss/issues"
+  },
+  "homepage": "https://github.com/lhafkamp/minor-funda-ss#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
