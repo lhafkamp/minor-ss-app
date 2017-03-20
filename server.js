@@ -1,5 +1,9 @@
-// load modules
+// require modules
 const express = require('express');
+require('dotenv').config();
+
+// get hidden APIKEY
+const APIKEY = process.env.API_KEY;
 
 // app = express
 const app = express();
