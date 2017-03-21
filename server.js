@@ -1,12 +1,6 @@
 // require modules
 const express = require('express');
-const fetch = require('node-fetch');
 const path = require('path');
-
-// fetch
-fetch('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC')
-	.then(data => data.json())
-	.then(data => console.log(data.data));
 
 // routers
 const indexRouter = require('./routes/index');
