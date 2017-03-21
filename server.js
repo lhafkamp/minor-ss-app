@@ -23,6 +23,11 @@ app.get('/', (req, res) => {
 	});
 });
 
+// parampampampam
+app.get('/:wow', (req, res) => {
+	res.send(`this is ${req.params.wow}`);
+})
+
 // run app on 9000
 app.listen(9000, () => {
 	console.log('');
