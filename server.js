@@ -1,5 +1,6 @@
 // require modules
 const express = require('express');
+const request = require('request');
 const path = require('path');
 
 // app = express
@@ -14,13 +15,12 @@ app.set('view engine', 'ejs');
 
 // render the index page
 app.get('/', (req, res) => {
-	res.render('index', {
-		title: 'bes title',
+	request('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC', (error, response, body) => {
+		const data = JSON.parse(body);
+		res.render('index', {
+			giphy: data,
+		});
 	});
-});
-
-app.get('/data', (req, res) => {
-	res.render('data');
 });
 
 // run app on 9000

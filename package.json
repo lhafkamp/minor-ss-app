@@ -4,7 +4,7 @@
   "description": "My original Funda app converted to server side",
   "main": "server.js",
   "scripts": {
-    "nodemon": "nodemon server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "node-fetch": "^1.6.3"
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

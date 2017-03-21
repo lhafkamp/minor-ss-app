@@ -1,6 +1,11 @@
 <%- include ./part/header.ejs %>
 
 	<h1>this is teh homepage</h1>
-	<h2> <%= title %> </h2>
+
+   	<ul>
+	    <% giphy.data.forEach(function(gif) { %>
+	        <img src="<%=gif.images.fixed_height.url%>"></img>
+	    <% }); %>
+	</ul>
 
 <%- include ./part/footer.ejs %>
