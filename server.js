@@ -7,7 +7,7 @@ const path = require('path');
 require('dotenv').config();
 
 const key = process.env.API_KEY;
-const host = `http://partnerapi.funda.nl/feeds/Aanbod.svc/json/${key}/?type=koop&zo=/&pagesize=25`;
+// const host = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${val}`;
 
 // app = express
 const app = express();
@@ -29,19 +29,30 @@ app.get('/', (req, res) => {
 
 // handle the search input and redirect
 app.post('/', (req, res) => {
-  	res.redirect('/' + req.body.city);
+  	res.redirect('/' + req.body.input);
 });
 
 
 // parampampampam
-app.get('/:val', (req, res) => {
-	request(`http://partnerapi.funda.nl/feeds/Aanbod.svc/json/${key}/?type=koop&zo=/${req.params.val}/&pagesize=25`, (error, response, body) => {
+app.get('/:input', (req, res) => {
+	request(`https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${req.params.input}`, (error, response, body) => {
 		const data = JSON.parse(body);
 		res.render('zoom', {
-			houses: data,
+			movies: data,
 		});
 	});
 });
+
+// app.get('/:input/:id', (req, res) => {
+// 	request(host + req.params.input + req.params.id, (error, response, body) => {
+// 		const data = JSON.parse(body);
+// 		const input = req.params.input;
+// 		res.render('megazoom.ejs', {
+// 			movie: data,
+// 			input: req.params.input,
+// 		});
+// 	});
+// });
 
 // run app on 9000
 app.listen(9000, () => {
