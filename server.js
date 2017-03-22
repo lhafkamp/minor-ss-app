@@ -29,9 +29,8 @@ app.get('/', (req, res) => {
 
 // handle the search input and redirect
 app.post('/', (req, res) => {
-  	res.redirect('/' + req.body.input);
+  	res.redirect('/' + req.body.val);
 });
-
 
 // parampampampam
 app.get('/:input', (req, res) => {
