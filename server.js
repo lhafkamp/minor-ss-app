@@ -3,6 +3,12 @@ const express = require('express');
 const request = require('request');
 const path = require('path');
 
+require('dotenv').config();
+
+const key = process.env.API_KEY;
+const host = `http://partnerapi.funda.nl/feeds/Aanbod.svc/json/${key}/?type=koop&zo=/amsterdam/tuin/&page=1&pagesize=25`;
+
+
 // app = express
 const app = express();
 
@@ -15,8 +21,9 @@ app.set('view engine', 'ejs');
 
 // render the index page
 app.get('/', (req, res) => {
-	request('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC', (error, response, body) => {
+	request(host, (error, response, body) => {
 		const data = JSON.parse(body);
+		console.log(data);
 		res.render('index', {
 			giphy: data,
 		});
@@ -25,8 +32,13 @@ app.get('/', (req, res) => {
 
 // parampampampam
 app.get('/:wow', (req, res) => {
-	res.send(`this is ${req.params.wow}`);
-})
+	request(host + req.params.wow, (error, response, body) => {
+		const data = JSON.parse(body);
+		res.render('zoom', {
+			giphy: data,
+		});
+	});
+});
 
 // run app on 9000
 app.listen(9000, () => {
