@@ -29,15 +29,17 @@ app.get('/', (req, res) => {
 
 // handle the search input and redirect
 app.post('/', (req, res) => {
-  	res.redirect('/' + req.body.val);
+  	res.redirect('/results/' + req.body.val);
 });
 
 // parampampampam
-app.get('/:input', (req, res) => {
+app.get('/results/:input', (req, res) => {
 	request(`https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${req.params.input}`, (error, response, body) => {
 		const data = JSON.parse(body);
+		const value = req.params.input;
 		res.render('zoom', {
 			movies: data,
+			value: value,
 		});
 	});
 });
