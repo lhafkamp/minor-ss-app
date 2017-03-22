@@ -3,9 +3,10 @@
 <% const mov = movie.results[0] %>
 
 <article>
-	<img src="http://image.tmdb.org/t/p/w185/<%= mov.poster_path %>" />
+	<img src="http://image.tmdb.org/t/p/w342/<%= mov.poster_path %>" />
 	<h1><%= mov.title %></h1>
-	<p><%= mov.overview %></p>
+	<p>Score: <%= mov.vote_average %></p>
+	<p>Description: <%= mov.overview %></p>
 </article>
 
 <%- include ./part/footer.ejs %>

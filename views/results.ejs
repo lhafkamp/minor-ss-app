@@ -2,6 +2,10 @@
 
 <h1>Movies found with the input '<%= value %>'</h1>
 
+<% if(movies.results < 1) { %>
+<% console.log('no movies found') %>
+<% } %>
+
 <% movies.results.forEach((movie) => { %>
 	
 	<article>

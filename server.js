@@ -3,17 +3,13 @@ const express = require('express');
 const request = require('request');
 const bodyParser = require('body-parser');
 const path = require('path');
-
 require('dotenv').config();
 
-const key = process.env.API_KEY;
-// const host = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${val}`;
-
-// app = express
 const app = express();
-
-// bp
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// put the secret API_KEY in key
+const key = process.env.API_KEY;
 
 // get the public files
 app.use(express.static('public'));
@@ -48,7 +44,6 @@ app.get('/results/:input', (req, res) => {
 app.get('/results/:input/:id', (req, res) => {
 	request(`https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${req.params.input}/${req.params.id}`, (error, response, body) => {
 		const data = JSON.parse(body);
-		console.log(data);
 		res.render('zoom', {
 			movie: data,
 		});
