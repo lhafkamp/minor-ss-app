@@ -2,6 +2,8 @@
 
 <% const mov = movie.results[0] %>
 
+<a href="/">back</a>
+
 <article>
 	<img src="http://image.tmdb.org/t/p/w342/<%= mov.poster_path %>" />
 	<h1><%= mov.title %></h1>
@@ -9,4 +11,6 @@
 	<p>Description: <%= mov.overview %></p>
 </article>
 
+
+<script src="/js/script.js"></script>
 <%- include ./part/footer.ejs %>

@@ -50,6 +50,11 @@ app.get('/results/:input/:id', (req, res) => {
 	});
 });
 
+// in case of error
+app.get('*', (req, res) => {
+	res.render('error');
+});
+
 // run app on 9000
 app.listen(9000, () => {
 	console.log('');

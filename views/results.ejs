@@ -1,10 +1,14 @@
 <%- include ./part/header.ejs %>
 
 <h1>Movies found with the input '<%= value %>'</h1>
+<a href="/">back</a>
 
 <% if(movies.results < 1) { %>
 <% console.log('no movies found') %>
 <% } %>
+
+
+<section>
 
 <% movies.results.forEach((movie) => { %>
 	
@@ -15,5 +19,6 @@
 
 <% }); %>
 
+</section>
 
 <%- include ./part/footer.ejs %>
