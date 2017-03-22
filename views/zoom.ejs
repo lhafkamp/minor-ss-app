@@ -1,14 +1,11 @@
 <%- include ./part/header.ejs %>
 
-<h1>Movies found with the input '<%= value %>'</h1>
+<% const mov = movie.results[0] %>
 
-<% movies.results.forEach((movie) => { %>
-	
-	<article>
-		<img src="http://image.tmdb.org/t/p/w185/<%= movie.poster_path %>" />
-		<a href=""><%= movie.original_title %></a>
-	</article>
-
-<% }); %>
+<article>
+	<img src="http://image.tmdb.org/t/p/w185/<%= mov.poster_path %>" />
+	<h1><%= mov.title %></h1>
+	<p><%= mov.overview %></p>
+</article>
 
 <%- include ./part/footer.ejs %>

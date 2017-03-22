@@ -1,0 +1,15 @@
+<%- include ./part/header.ejs %>
+
+<h1>Movies found with the input '<%= value %>'</h1>
+
+<% movies.results.forEach((movie) => { %>
+	
+	<article>
+		<img src="http://image.tmdb.org/t/p/w185/<%= movie.poster_path %>" />
+		<a href="/results/<%= value %>/<%= movie.title %>"><%= movie.original_title %></a>
+	</article>
+
+<% }); %>
+
+
+<%- include ./part/footer.ejs %>

@@ -32,28 +32,28 @@ app.post('/', (req, res) => {
   	res.redirect('/results/' + req.body.val);
 });
 
-// parampampampam
+// show results
 app.get('/results/:input', (req, res) => {
 	request(`https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${req.params.input}`, (error, response, body) => {
 		const data = JSON.parse(body);
 		const value = req.params.input;
-		res.render('zoom', {
+		res.render('results', {
 			movies: data,
 			value: value,
 		});
 	});
 });
 
-// app.get('/:input/:id', (req, res) => {
-// 	request(host + req.params.input + req.params.id, (error, response, body) => {
-// 		const data = JSON.parse(body);
-// 		const input = req.params.input;
-// 		res.render('megazoom.ejs', {
-// 			movie: data,
-// 			input: req.params.input,
-// 		});
-// 	});
-// });
+// show a single movie
+app.get('/results/:input/:id', (req, res) => {
+	request(`https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${req.params.input}/${req.params.id}`, (error, response, body) => {
+		const data = JSON.parse(body);
+		console.log(data);
+		res.render('zoom', {
+			movie: data,
+		});
+	});
+});
 
 // run app on 9000
 app.listen(9000, () => {
