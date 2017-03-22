@@ -2,6 +2,10 @@
 
 <h1>this is teh zoom</h1>
 
-<p><%= giphy %></p>
+ 	<ul>
+	    <% houses.Objects.forEach(function(house) { %>
+	       	<p><%= house.Adres %></p>
+	    <% }); %>
+	</ul>
 
 <%- include ./part/footer.ejs %>

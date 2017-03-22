@@ -8,7 +8,6 @@ require('dotenv').config();
 const key = process.env.API_KEY;
 const host = `http://partnerapi.funda.nl/feeds/Aanbod.svc/json/${key}/?type=koop&zo=/amsterdam/tuin/&page=1&pagesize=25`;
 
-
 // app = express
 const app = express();
 
@@ -25,17 +24,17 @@ app.get('/', (req, res) => {
 		const data = JSON.parse(body);
 		console.log(data);
 		res.render('index', {
-			giphy: data,
+			houses: data,
 		});
 	});
 });
 
 // parampampampam
-app.get('/:wow', (req, res) => {
-	request(host + req.params.wow, (error, response, body) => {
+app.get('/:koop', (req, res) => {
+	request(`http://partnerapi.funda.nl/feeds/Aanbod.svc/json/${key}/?type=${req.params.koop}&zo=/amsterdam/tuin/&page=1&pagesize=25`, (error, response, body) => {
 		const data = JSON.parse(body);
 		res.render('zoom', {
-			giphy: data,
+			houses: data,
 		});
 	});
 });
