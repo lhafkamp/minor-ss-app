@@ -1,11 +1,17 @@
 <%- include ./part/header.ejs %>
 
-<h1>this is teh zoom</h1>
+<h1>Zoekresultaten in x</h1>
 
- 	<ul>
-	    <% houses.Objects.forEach(function(house) { %>
-	       	<p><%= house.Adres %></p>
-	    <% }); %>
-	</ul>
+<% houses.Objects.forEach(function(house) { %>
+	
+	<article>
+		<img src="<%= house.FotoLarge %>"></img>
+		<p><%= house.Adres %></p>
+	</article>
+
+
+
+
+<% }); %>
 
 <%- include ./part/footer.ejs %>

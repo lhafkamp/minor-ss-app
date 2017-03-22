@@ -1,11 +1,11 @@
 <%- include ./part/header.ejs %>
+	
+	<h1>Waar wil je wonen?</h1>
 
-	<h1>this is teh homepage</h1>
+	<form action="/" method="post">
+		<input type="text" name="city" placeholder="Waar wil je wonen?" />
+		<input type="submit" value="Zoek" />
+	</form>
 
-   	<ul>
-	    <% houses.Objects.forEach(function(house) { %>
-	       	<p><%= house.Adres %></p>
-	    <% }); %>
-	</ul>
 
 <%- include ./part/footer.ejs %>
