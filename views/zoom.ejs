@@ -2,15 +2,12 @@
 
 <h1>Zoekresultaten in x</h1>
 
-<% houses.Objects.forEach(function(house) { %>
+<% movies.results.forEach((movie) => { %>
 	
 	<article>
-		<img src="<%= house.FotoLarge %>"></img>
-		<p><%= house.Adres %></p>
+		<img src="http://image.tmdb.org/t/p/w185/<%= movie.poster_path %>" />
+		<a href=""><%= movie.original_title %></a>
 	</article>
-
-
-
 
 <% }); %>
 
