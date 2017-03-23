@@ -1,3 +1,4 @@
-const randomTest = 'wow this is random';
+const random = 'wow this is random';
 
-module.exports = randomTest;
+module.exports = random;
+

@@ -1,3 +1,4 @@
-const soRandomIdontEven = require('random.js');
+const random = require('./random');
 
-console.log(soRandomIdontEven);
+console.log(random);
+
