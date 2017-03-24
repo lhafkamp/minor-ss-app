@@ -1,0 +1,15 @@
+<%- include ./part/header.ejs %>
+
+<% const mov = movie.results[0] %>
+
+<section class="zoom">
+	<img src="http://image.tmdb.org/t/p/w342/<%= mov.poster_path %>" />
+	<article>
+		<h1><%= mov.title %></h1>
+		<p>Score: <%= mov.vote_average %></p>
+		<p>Description: <%= mov.overview %></p>
+		<a href="/">back</a>
+	</article>
+</section>
+
+<%- include ./part/footer.ejs %>

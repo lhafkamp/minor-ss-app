@@ -1,0 +1,24 @@
+<%- include ./part/header.ejs %>
+
+<h1>Movies found with the input '<%= value %>'</h1>
+<a href="/">back</a>
+
+<% if(movies.results < 1) { %>
+<% console.log('no movies found') %>
+<% } %>
+
+
+<section class="results">
+
+<% movies.results.forEach((movie) => { %>
+	
+	<article>
+		<img src="http://image.tmdb.org/t/p/w185/<%= movie.poster_path %>" />
+		<a href="/results/<%= value %>/<%= movie.title %>"><%= movie.original_title %></a>
+	</article>
+
+<% }); %>
+
+</section>
+
+<%- include ./part/footer.ejs %>

@@ -1,74 +1,67 @@
-// load modules
+// require modules
 const express = require('express');
+const request = require('request');
+const bodyParser = require('body-parser');
+const path = require('path');
+require('dotenv').config();
 
-// app = express
 const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// serve static files
+// put the secret API_KEY in key
+const key = process.env.API_KEY;
+
+// get the public files
 app.use(express.static('public'));
 
-// send to the page
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+// render the index page
 app.get('/', (req, res) => {
-	res.send(home());
+	res.render('index');
 });
 
-// render home
-function home() {
-	return `
-		<!DOCTYPE html>
-		<html lang="nl">
-		<head>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="initial-scale=1, width=device-width">
-			<title>Luuk - Funda</title>
-			<link rel="stylesheet" href="css/styles.css">
-		</head>
-			<body>
+// handle the search input and redirect
+app.post('/', (req, res) => {
+  	res.redirect('/results/' + req.body.val);
+});
 
-				<section class="options">
-					<img src="images/huis.svg">
+// show results
+app.get('/results/:input', (req, res) => {
+	request(`https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${req.params.input}`, (error, response, body) => {
+		const data = JSON.parse(body);
+		const value = req.params.input;
+		res.render('results', {
+			movies: data,
+			value: value,
+		});
+	});
+});
 
-					<div class="cities">
-						<h1>Waar wil je wonen?</h1>
-						<button><span>Loading...<span></button>
-						<button><span>Loading...<span></button>
-						<button><span>Loading...<span></button>
-					</div>
+// show a single movie
+app.get('/results/:input/:id', (req, res) => {
+	request(`https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${req.params.input}/${req.params.id}`, (error, response, body) => {
+		const data = JSON.parse(body);
+		res.render('zoom', {
+			movie: data,
+		});
+	});
+});
 
-					<div class="buyrent hide">
-						<h1>Wil je kopen of huren?</h1>
-						<button>Kopen</button>
-						<button>Huren</button>
-					</div>
-					
-					<div class="who hide">
-						<h1>Wat definieert jou?</h1>
-						<button>Muzikant</button>
-						<button>Natuurmens</button>
-						<button>Blut</button>
-					</div>	
-				</section>
-				
-				<div class="results hide">
-					<img src="images/logo.svg">
-					<h1>Dit past bij jou</h1>
-					<span></span>
-				</div>
-
-				<div id="loaderbox" class="hide">
-		    		<img src="images/rolling.svg">
-				</div>
-
-				<container class="houses"></container>
-
-				<script src="js/config.js"></script>
-				<script src="js/script.js"></script>
-			</body>
-		</html>
-	`;
-}
+// in case of error
+app.get('*', (req, res) => {
+	res.render('error');
+});
 
 // run app on 9000
 app.listen(9000, () => {
-	console.log('Running.. ¯l_(ツ)_/¯');
+	console.log('');
+    console.log('All hail the mighty server bunny');
+    console.log('');
+    console.log('(l)(/)');
+    console.log('( Oo )');
+    console.log('(")(")o');
+    console.log('');
 });
