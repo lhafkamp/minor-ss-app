@@ -4,7 +4,8 @@
   "description": "movie app ",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "build": "browserify public/js/script.js -o public/js/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -18,12 +19,14 @@
   "homepage": "https://github.com/lhafkamp/minor-ss-app#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "browserify": "^14.1.0",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
     "request": "^2.81.0"
   },
   "devDependencies": {
+    "browserify": "^14.1.0",
     "nodemon": "^1.11.0"
   }
 }
