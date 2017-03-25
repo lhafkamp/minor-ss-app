@@ -1,5 +1,21 @@
+body {
+	background: black;
+	background:  linear-gradient(
+      rgba(0, 0, 0, .8), 
+      rgba(0, 0, 0, .8)
+    ),
+    url("http://searchengineland.com/figz/wp-content/seloads/2015/08/movie-film-video-production-ss-1920-800x450.jpg");
+	background-size: 100vw;
+	height: 100vh;
+}
+
 h1 {
-	color: red;
+	color: white;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 3em;
+	margin-top: 2em;
+	margin-bottom: .7em;
 }
 
 .zoom {
@@ -24,6 +40,9 @@ h1 {
 	align-items: center;
 	margin: 1em;
 	position: relative;
+	padding: 1em;
+    background: white;
+    border-radius: .4em;
 }
 
 .results article a:after {
@@ -45,10 +64,43 @@ container {
 
 form {
 	display: flex;
-	flex-direction: column;
 }
 
-input {
-	height: 10em;
-	width: 100em;
+form input {
+	font-size: 1em;
+}
+
+form input:focus {
+	outline: none;
+}
+
+form input:first-of-type {
+	border-top-left-radius: .4em;
+	border-bottom-left-radius: .4em;
+	height: 3em;
+	width: 65vw;
+	padding-left: 1em;
+	border-bottom: 5px solid white;
+	transition: .4s border-bottom;
+}
+
+form input:last-of-type {
+	border-top-right-radius: .4em;
+	border-bottom-right-radius: .4em;
+	cursor: pointer;
+	width: 8em;
+	border: none;
+	background: #E2747A;
+	transition: .2s background;
+	color: white;
+}
+
+form input:first-of-type:hover,
+form input:first-of-type:focus {
+	border-bottom: 5px solid #E2747A;
+}
+
+form input:last-of-type:hover,
+form input:last-of-type:focus {
+	background: #F43D3D;
 }
