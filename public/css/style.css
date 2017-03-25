@@ -9,23 +9,72 @@ body {
 	height: 100vh;
 }
 
-h1 {
-	color: white;
+h1,
+p,
+a {
 	font-family: sans-serif;
 	font-weight: 100;
+}
+
+container h1 {
+	color: white;
 	font-size: 3em;
 	margin-top: 2em;
 	margin-bottom: .7em;
 }
 
+section article h1 {
+	color: white;
+	font-size: 3em;
+	margin-bottom: .7em;
+}
+
+section article p:last-of-type {
+	font-style: italic;
+}
+
 .zoom {
 	display: flex;
+	padding: 1em;
 }
 
 .zoom article {
+	padding: 1em;
 	margin-left: 1em;
 	display: flex;
 	flex-direction: column;
+}
+
+.zoom article a {
+	margin-top: 1em;
+	padding: 1.2em;
+	width: 6em;
+	border-radius: .4em;
+	background: #E2747A;
+	text-align: center;
+	text-decoration: none;
+}
+
+.zoom article a:hover {
+	background: #F43D3D;
+}
+
+.zoom span {
+	color: #FFE94B;
+	font-weight: 500;
+}
+
+.zoom article p,
+.zoom article a {
+	color: white;
+}
+
+.resheader {
+	color: white;
+	font-size: 2em;
+	margin-top: 1em;
+	margin-left: 1em;
+	margin-bottom: .7em;
 }
 
 .results {
@@ -40,9 +89,20 @@ h1 {
 	align-items: center;
 	margin: 1em;
 	position: relative;
-	padding: 1em;
+	padding: .5em;
     background: white;
     border-radius: .4em;
+    height: min-content;
+}
+
+.results article a {
+	max-width: 9.55em;
+	width: 83%;
+    text-align: center;
+    padding: 1em;
+    background: #E2747A;
+    color: white;
+    text-decoration: none;
 }
 
 .results article a:after {
@@ -52,6 +112,10 @@ h1 {
 	top: 0;
 	bottom: 0;
 	content: '';
+}
+
+.results article a:hover {
+	background: #F43D3D;
 }
 
 container {
