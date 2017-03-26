@@ -1,3 +1,8 @@
+@font-face {
+	font-family: 'Far';
+	src: url('../fonts/Farsan-Regular.ttf');
+}
+
 body {
 	background: black;
 	background:  linear-gradient(
@@ -9,16 +14,24 @@ body {
 	height: 100vh;
 }
 
-h1,
+h1 {
+	font-family: 'Far', sans-serif;
+}
+
 p,
 a {
 	font-family: sans-serif;
 	font-weight: 100;
+	color: white;
+}
+
+p {
+	line-height: 1.6em;
 }
 
 container h1 {
 	color: white;
-	font-size: 3em;
+	font-size: 4em;
 	margin-top: 2em;
 	margin-bottom: .7em;
 }
@@ -64,11 +77,6 @@ section article p:last-of-type {
 	font-weight: 500;
 }
 
-.zoom article p,
-.zoom article a {
-	color: white;
-}
-
 .resheader {
 	color: white;
 	font-size: 2em;
@@ -101,7 +109,6 @@ section article p:last-of-type {
     text-align: center;
     padding: 1em;
     background: #E2747A;
-    color: white;
     text-decoration: none;
 }
 
