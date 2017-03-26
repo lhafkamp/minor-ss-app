@@ -2,6 +2,10 @@
 
 <% const mov = movie.results[0] %>
 
+<% if (mov.poster_path === null) { %>
+	<% mov.poster_path = '/21YM9C8AyFm0ANuuWxuZYZMFwDL.jpg' %>
+<% } %>
+
 <section class="zoom">
 	<img src="http://image.tmdb.org/t/p/w342/<%= mov.poster_path %>" />
 	<article>

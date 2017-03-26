@@ -32,7 +32,7 @@ app.post('/', (req, res) => {
 app.get('/results/:input', (req, res) => {
 	request(`https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${req.params.input}`, (error, response, body) => {
 		const data = JSON.parse(body);
-		const value = req.params.input;
+		const value = req.params.input;;
 		res.render('results', {
 			movies: data,
 			value: value,
