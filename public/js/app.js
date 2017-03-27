@@ -1,9 +1,9 @@
 // if serviceworker is supported
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('./sw.js', { scope: './' }).then((registration) => {
-		console.log('yes', registration);
+		console.log('SW found');
 	}).catch((err) => {
-		console.log('no', err);
+		console.log('SW not found', err);
 	});
 }
 
