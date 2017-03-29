@@ -2,10 +2,17 @@
 const express = require('express');
 const request = require('request');
 const bodyParser = require('body-parser');
+const compression = require('compression');
 const path = require('path');
 require('dotenv').config();
 
+// express
 const app = express();
+
+// gzip
+app.use(compression());
+
+// bodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // put the secret API_KEY in key
