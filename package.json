@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "build": "browserify public/js/app.js -o public/js/bundle.js"
+    "build": "browserify public/js/app.js -o public/js/bundle.js",
+    "expose": "ngrok http 9000"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "browserify": "^14.1.0",
+    "ngrok": "^2.2.6",
     "nodemon": "^1.11.0"
   }
 }
