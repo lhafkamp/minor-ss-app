@@ -3,6 +3,7 @@ const express = require('express');
 const request = require('request');
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const critical = require('critical');
 const path = require('path');
 require('dotenv').config();
 
@@ -20,6 +21,15 @@ const key = process.env.API_KEY;
 
 // get the public files
 app.use(express.static('public'));
+
+// css critical
+critical.generate({
+    base: 'public/',
+    src: 'http://localhost:9000',
+    dest: 'css/critical.css',
+    width: 1300,
+    height: 900
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
