@@ -31,6 +31,8 @@ this.addEventListener('activate', (event) => {
 	);
 });
 
+// code author: Jeroen
+
 this.addEventListener('fetch', (event) => {
 	const request = event.request;
 	if (request.mode === 'navigate') {
