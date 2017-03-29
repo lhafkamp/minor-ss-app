@@ -1,3 +1,7 @@
+html {
+    font-family: 'Far', sans-serif;
+}
+
 @font-face {
 	font-family: 'Far';
 	src: url('../fonts/Farsan-Regular.ttf');
