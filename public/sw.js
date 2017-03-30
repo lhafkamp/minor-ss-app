@@ -3,7 +3,7 @@ const pageVersion = 'v1-pages';
 const cacheFiles = [
 	'./offline.html',
 	'/images/logo.png',
-	'/css/style.css',
+	'/css/style.min.css',
 	'/fonts/Farsan-Regular.ttf',
 ];
 
