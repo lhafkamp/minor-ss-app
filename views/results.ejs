@@ -1,0 +1,28 @@
+<%- include ./part/header.ejs %>
+
+<h1 class="resheader">Movies found with the input '<%= value %>'</h1>
+
+<% if(movies.results < 1) { %>
+	<container>
+		<h1>No movies found</h1>
+		<a href="/">back</a>
+	</container>
+<% } %>
+
+<section class="results">
+
+<% movies.results.forEach((movie) => { %>
+	<% if (movie.poster_path === null) { %>
+	<% movie.poster_path = '/21YM9C8AyFm0ANuuWxuZYZMFwDL.jpg' %>
+	<% } %>
+
+	<article>
+		<img src="http://image.tmdb.org/t/p/w185<%= movie.poster_path %>" />
+		<a href="/results/<%= value %>/<%= movie.title %>"><%= movie.original_title %></a>
+	</article>
+
+<% }); %>
+
+</section>
+
+<%- include ./part/footer.ejs %>

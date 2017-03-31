@@ -1,0 +1,266 @@
+html {
+    font-family: 'Far', sans-serif;
+}
+
+@font-face {
+	font-family: 'Far';
+	src: url('../fonts/Farsan-Regular.ttf');
+}
+
+body {
+	background: black;
+	background:  linear-gradient(
+      rgba(0, 0, 0, .6), 
+      rgba(0, 0, 0, 1)
+    ),
+    url("http://searchengineland.com/figz/wp-content/seloads/2015/08/movie-film-video-production-ss-1920-800x450.jpg");
+	background-size: 100vw;
+	height: 100vh;
+}
+
+nav img {
+	margin-top: 1em;
+	position: fixed;
+	padding-top: 1em;
+	padding-right: 1em;
+	z-index: 2000;
+	width: 3.3em;
+	cursor: pointer;
+	padding: 1em;
+	background: black;
+	border-radius: .4em;
+	transition: .2s width;
+}
+
+nav img:hover,
+nav img:focus {
+	width: 4em;
+}
+
+h1 {
+	font-family: 'Far', sans-serif;
+}
+
+p,
+a {
+	font-family: sans-serif;
+	font-weight: 100;
+	color: white;
+}
+
+p {
+	line-height: 1.6em;
+}
+
+container h1 {
+	color: white;
+	font-size: 4em;
+	margin-top: 2em;
+	margin-bottom: .7em;
+}
+
+section article h1 {
+	color: white;
+	font-size: 3em;
+	margin-bottom: .7em;
+}
+
+section article p:last-of-type {
+	font-style: italic;
+}
+
+.zoom {
+	display:-webkit-flex;
+	display: flex;
+	padding: 1em;
+}
+
+.zoom article {
+	padding: 1em;
+	margin-left: 1em;
+	display:-webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+.zoom article a {
+	margin-top: 1em;
+	padding: 1.2em;
+	width: 6em;
+	border-radius: .4em;
+	background: #E2747A;
+	text-align: center;
+	text-decoration: none;
+	transition: .3s background;
+}
+
+.zoom article a:hover,
+.zoom article a:focus {
+	background: #F43D3D;
+}
+
+.zoom span {
+	color: #FFE94B;
+	font-weight: 500;
+}
+
+.resheader {
+	color: white;
+	font-size: 2em;
+	margin-top: 1em;
+	margin-left: 1em;
+	margin-bottom: .7em;
+}
+
+.results {
+	display:-webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.results article {
+	display:-webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	margin: 1em;
+	position: relative;
+	padding: .5em;
+    background: white;
+    border-radius: .4em;
+    height: min-content;
+}
+
+.results article a {
+	max-width: 9.55em;
+	width: 83%;
+    text-align: center;
+    padding: 1em;
+    background: #E2747A;
+    text-decoration: none;
+	transition: .3s background;
+}
+
+.results article a:after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	content: '';
+}
+
+.results article a:hover,
+.results article a:focus {
+	background: #F43D3D;
+}
+
+container {
+	display:-webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	height: 70vh;
+}
+
+container a {
+	margin-top: 1em;
+	padding: 1.2em;
+	width: 6em;
+	border-radius: .4em;
+	background: #E2747A;
+	text-align: center;
+	text-decoration: none;
+	transition: .3s background;
+}
+
+container a:hover,
+container a:focus {
+	background: #F43D3D;
+}
+
+form {
+	display:-webkit-flex;
+	display: flex;
+}
+
+form input {
+	font-size: 1em;
+}
+
+form input:focus {
+	outline: none;
+}
+
+form input:first-of-type {
+	border-top-left-radius: .4em;
+	border-bottom-left-radius: .4em;
+	height: 3em;
+	width: 65vw;
+	padding-left: 1em;
+	border-bottom: 5px solid white;
+	transition: .4s border-bottom;
+}
+
+form input:last-of-type {
+	-webkit-appearance: none;
+	border-top-right-radius: .4em;
+	border-bottom-right-radius: .4em;
+	cursor: pointer;
+	width: 8em;
+	border: none;
+	background: #E2747A;
+	transition: .3s background;
+	color: white;
+}
+
+form input:first-of-type:hover,
+form input:first-of-type:focus {
+	border-bottom: 5px solid #E2747A;
+}
+
+form input:last-of-type:hover,
+form input:last-of-type:focus {
+	background: #F43D3D;
+}
+
+@media (max-width: 45em) {
+	.zoom {
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+
+	.zoom img {
+		width: 100%;
+	}
+
+	nav img {
+		position: relative;
+		height: 3.3em;
+		cursor: pointer;
+	}
+
+	container h1 {
+		margin-top: 0;
+		text-align: center;
+		line-height: 1em;
+	}
+
+	.resheader {
+		width: 70%;
+	}
+
+	form input:first-of-type {
+		width: 60%;
+	}
+}

@@ -1,0 +1,447 @@
+@font-face {
+  font-family: 'Far';
+  src: url('../../../../../../fonts/Farsan-Regular.ttf');
+}
+
+body {
+  background: black;
+  background: linear-gradient(
+      rgba(0, 0, 0, .6), 
+      rgba(0, 0, 0, 1)
+    ),
+    url("http://searchengineland.com/figz/wp-content/seloads/2015/08/movie-film-video-production-ss-1920-800x450.jpg");
+  background-size: 100vw;
+  height: 100vh;
+}
+
+nav a {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav img {
+  margin-top: 1em;
+  position: fixed;
+  padding-top: 1em;
+  padding-right: 1em;
+  z-index: 2000;
+  width: 3.3em;
+  padding: 1em;
+  background: black;
+  border-radius: .4em;
+}
+
+h1 {
+  font-family: 'Far', sans-serif;
+}
+
+a {
+  font-family: sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+container h1 {
+  color: white;
+  font-size: 4em;
+  margin-top: 2em;
+  margin-bottom: .7em;
+}
+
+container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+form {
+  display: flex;
+}
+
+form input {
+  font-size: 1em;
+}
+
+form input:first-of-type {
+  border-top-left-radius: .4em;
+  border-bottom-left-radius: .4em;
+  height: 3em;
+  width: 65vw;
+  padding-left: 1em;
+  border-bottom: 5px solid white;
+}
+
+form input:last-of-type {
+  border-top-right-radius: .4em;
+  border-bottom-right-radius: .4em;
+  width: 8em;
+  border: none;
+  background: #E2747A;
+  color: white;
+}
+
+@font-face {
+  font-family: 'Far';
+  src: url('../../../../../fonts/Farsan-Regular.ttf');
+}
+
+body {
+  background: black;
+  background: linear-gradient(
+      rgba(0, 0, 0, .6), 
+      rgba(0, 0, 0, 1)
+    ),
+    url("http://searchengineland.com/figz/wp-content/seloads/2015/08/movie-film-video-production-ss-1920-800x450.jpg");
+  background-size: 100vw;
+  height: 100vh;
+}
+
+nav a {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav img {
+  margin-top: 1em;
+  position: fixed;
+  padding-top: 1em;
+  padding-right: 1em;
+  z-index: 2000;
+  width: 3.3em;
+  padding: 1em;
+  background: black;
+  border-radius: .4em;
+}
+
+h1 {
+  font-family: 'Far', sans-serif;
+}
+
+a {
+  font-family: sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+container h1 {
+  color: white;
+  font-size: 4em;
+  margin-top: 2em;
+  margin-bottom: .7em;
+}
+
+container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+form {
+  display: flex;
+}
+
+form input {
+  font-size: 1em;
+}
+
+form input:first-of-type {
+  border-top-left-radius: .4em;
+  border-bottom-left-radius: .4em;
+  height: 3em;
+  width: 65vw;
+  padding-left: 1em;
+  border-bottom: 5px solid white;
+}
+
+form input:last-of-type {
+  border-top-right-radius: .4em;
+  border-bottom-right-radius: .4em;
+  width: 8em;
+  border: none;
+  background: #E2747A;
+  color: white;
+}
+
+html {
+  font-family: 'Far', sans-serif;
+}
+
+@font-face {
+  font-family: 'Far';
+  src: url('../../../../fonts/Farsan-Regular.ttf');
+}
+
+body {
+  background: black;
+  background: linear-gradient(
+      rgba(0, 0, 0, .6), 
+      rgba(0, 0, 0, 1)
+    ),
+    url("http://searchengineland.com/figz/wp-content/seloads/2015/08/movie-film-video-production-ss-1920-800x450.jpg");
+  background-size: 100vw;
+  height: 100vh;
+}
+
+nav a {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav img {
+  margin-top: 1em;
+  position: fixed;
+  padding-top: 1em;
+  padding-right: 1em;
+  z-index: 2000;
+  width: 3.3em;
+  padding: 1em;
+  background: black;
+  border-radius: .4em;
+}
+
+h1 {
+  font-family: 'Far', sans-serif;
+}
+
+a {
+  font-family: sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+container h1 {
+  color: white;
+  font-size: 4em;
+  margin-top: 2em;
+  margin-bottom: .7em;
+}
+
+container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+form {
+  display: flex;
+}
+
+form input {
+  font-size: 1em;
+}
+
+form input:first-of-type {
+  border-top-left-radius: .4em;
+  border-bottom-left-radius: .4em;
+  height: 3em;
+  width: 65vw;
+  padding-left: 1em;
+  border-bottom: 5px solid white;
+}
+
+form input:last-of-type {
+  border-top-right-radius: .4em;
+  border-bottom-right-radius: .4em;
+  width: 8em;
+  border: none;
+  background: #E2747A;
+  color: white;
+}
+
+html {
+  font-family: 'Far', sans-serif;
+}
+
+@font-face {
+  font-family: 'Far';
+  src: url('../../../fonts/Farsan-Regular.ttf');
+}
+
+body {
+  background: black;
+  background: linear-gradient(
+      rgba(0, 0, 0, .6), 
+      rgba(0, 0, 0, 1)
+    ),
+    url("http://searchengineland.com/figz/wp-content/seloads/2015/08/movie-film-video-production-ss-1920-800x450.jpg");
+  background-size: 100vw;
+  height: 100vh;
+}
+
+nav a {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav img {
+  margin-top: 1em;
+  position: fixed;
+  padding-top: 1em;
+  padding-right: 1em;
+  z-index: 2000;
+  width: 3.3em;
+  padding: 1em;
+  background: black;
+  border-radius: .4em;
+}
+
+h1 {
+  font-family: 'Far', sans-serif;
+}
+
+a {
+  font-family: sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+container h1 {
+  color: white;
+  font-size: 4em;
+  margin-top: 2em;
+  margin-bottom: .7em;
+}
+
+container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+form {
+  display: flex;
+}
+
+form input {
+  font-size: 1em;
+}
+
+form input:first-of-type {
+  border-top-left-radius: .4em;
+  border-bottom-left-radius: .4em;
+  height: 3em;
+  width: 65vw;
+  padding-left: 1em;
+  border-bottom: 5px solid white;
+}
+
+form input:last-of-type {
+  border-top-right-radius: .4em;
+  border-bottom-right-radius: .4em;
+  width: 8em;
+  border: none;
+  background: #E2747A;
+  color: white;
+}
+
+@media (max-width: 45em) {
+  container h1 {
+    text-align: center;
+  }
+}
+
+html {
+  font-family: 'Far', sans-serif;
+}
+
+@font-face {
+  font-family: 'Far';
+  src: url('../../fonts/Farsan-Regular.ttf');
+}
+
+body {
+  background: black;
+  background: linear-gradient(
+      rgba(0, 0, 0, .6), 
+      rgba(0, 0, 0, 1)
+    ),
+    url("http://searchengineland.com/figz/wp-content/seloads/2015/08/movie-film-video-production-ss-1920-800x450.jpg");
+  background-size: 100vw;
+  height: 100vh;
+}
+
+nav img {
+  margin-top: 1em;
+  position: fixed;
+  padding-top: 1em;
+  padding-right: 1em;
+  z-index: 2000;
+  width: 3.3em;
+  padding: 1em;
+  background: black;
+  border-radius: .4em;
+}
+
+h1 {
+  font-family: 'Far', sans-serif;
+}
+
+a {
+  font-family: sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+container h1 {
+  color: white;
+  font-size: 4em;
+  margin-top: 2em;
+  margin-bottom: .7em;
+}
+
+container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 70vh;
+}
+
+form {
+  display: -webkit-flex;
+  display: flex;
+}
+
+form input {
+  font-size: 1em;
+}
+
+form input:first-of-type {
+  border-top-left-radius: .4em;
+  border-bottom-left-radius: .4em;
+  height: 3em;
+  width: 65vw;
+  padding-left: 1em;
+  border-bottom: 5px solid white;
+}
+
+form input:last-of-type {
+  border-top-right-radius: .4em;
+  border-bottom-right-radius: .4em;
+  width: 8em;
+  border: none;
+  background: #E2747A;
+  color: white;
+}
+
+@media (max-width: 45em) {
+  nav {
+    position: relative;
+  }
+
+  container h1 {
+    text-align: center;
+  }
+}
