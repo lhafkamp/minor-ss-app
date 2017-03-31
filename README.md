@@ -38,7 +38,7 @@ To run <a href="https://ngrok.com/">ngrok</a> to expose the application to the w
 
   
 ## Tooling
-In order to use 'require' client side I used Browserify to make 1 bundle.js which combines all the Javascript files.
+In order to use 'require' client side I used <a href="http://browserify.org/">Browserify</a> to make 1 bundle.js which combines all the Javascript files.
 
 For example, in a random.js file I used:  
 `const random = 'wow this is random';`  
