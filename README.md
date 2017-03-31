@@ -2,8 +2,12 @@
 Assignment to make a server side app with certain performance techniques and a service worker. I used the <a href="https://www.themoviedb.org/">"https://www.themoviedb.org/"</a> API to fetch the movies.
 
 ![screenshot](screens/home.png)
+Search for any movie  
+![screenshot](screens/results.png)
+Get your results  
+![screenshot](screens/zoom.png)
+Get more information  
   
-
   
 ## Intro
 I created a new API because I didn't like the fact that Funda will pull their API eventually. This way I can look back at my project in a few months and see what I could've done better and maybe try to improve it.
