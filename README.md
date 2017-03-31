@@ -30,10 +30,13 @@ For example, in a random.js file I used:
 `const random = 'wow this is random';`  
 `module.exports = random;`  
 
-And in the app.js file I required all exported files:  
-`const random = require('./random');`  
-`const navigator = require('./navigator');`  
-`const fontface = require('./fontface');`  
+And in the app.js file I required all exported files:
+
+```js  
+const random = require('./random');  
+const navigator = require('./navigator');
+const fontface = require('./fontface'); 
+```
   
 `console.log(random);` (here I can use the const I made in the random.js file)  
   
@@ -73,10 +76,28 @@ I implemented the following techniques to improve the performance of the applica
 
 
 ## Service worker
+The service worker I implemented will make sure that the css/fonts/images get cached into the browser. It also remembers the path the users has taken before so it can render this path even without an internet connection. If the user is offline and he tries to visit a page that he didn't visit before, offline.html gets rendered and the user gets to see this:
+  
+![screenshot](screens/offline.png)
+  
+If you go to <a href="http://caniuse.com/#search=servi">caniuse.com</a> you can see that the service worker isn't widely supported yet. To make sure this isn't a problem I created a fallback that checks if the service worker is supported:
+  
+```js
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('./sw.js', { scope: './' }).then((registration) => {
+		console.log('SW found');
+	}).catch((err) => {
+		console.log('SW not found', err);
+	});
+}
+```
+  
+When it isn't supported the app will just run without the service worker.
 
 
 ## Sources
-<a href="https://www.themoviedb.org/">"https://www.themoviedb.org/"</a>  
+<a href="https://www.themoviedb.org/">https://www.themoviedb.org/</a>  
+<a href="http://caniuse.com/#search=servi">caniuse.com</a>
 <a href="https://fontfaceobserver.com/">https://fontfaceobserver.com/</a>  
 <a href="http://browserify.org/">http://browserify.org/</a>  
 <a href="https://criticalcss.com/">https://criticalcss.com/</a>  
