@@ -2,16 +2,19 @@
 Assignment to make a server side app with certain performance techniques and a service worker. I used the <a href="https://www.themoviedb.org/">"https://www.themoviedb.org/"</a> API to fetch the movies.
 
 ![screenshot](screens/home.png)
+  
 
+  
 ## Intro
 I created a new API because I didn't like the fact that Funda will pull their API eventually. This way I can look back at my project in a few months and see what I could've done better and maybe try to improve it.
 
 I tried to relearn Node.js in these 2 weeks so it took me a lot of time to get things up and running while learning about new tooling like <a href="browserify.org">Browserify</a> and <a href="http://requirejs.org/docs/commonjs.html">Common.js</a>. I also implemented a service worker so my site shows a couple of files/pages without an internet connection.
+  
+
 
 ## Build
-
-The current `.env` is hidden from GitHub. Make sure you add an `.env` file with the following API key:  
-`API_KEY={yourAPIKEYhere}`.
+The current `.env` is hidden from GitHub. Make sure you add an `.env` file with the API key. Example:    
+`API_KEY=2WE8979wWPuweoiwuer`
 
 To use the app you need to run the following commands:  
 - `npm install` to install the Node dependencies  
@@ -19,14 +22,15 @@ To use the app you need to run the following commands:
 - `npm run expose` to run <a href="https://ngrok.com/">ngrok</a> to expose the application to the web (optional)
   
 
+  
 ## Tooling
 In order to use 'require' client side I used Browserify to make 1 bundle.js which combines all the Javascript files.
 
-For example, in a random.js file I used:
+For example, in a random.js file I used:  
 `const random = 'wow this is random';`  
 `module.exports = random;`  
 
-And in the app.js file I required all exported files:
+And in the app.js file I required all exported files:  
 `const random = require('./random');`  
 `const navigator = require('./navigator');`  
 `const fontface = require('./fontface');`  
@@ -34,7 +38,9 @@ And in the app.js file I required all exported files:
 `console.log(random);` (here I can use the const I made in the random.js file)  
   
 To complete this I ran `npm run build` which compiled the app.js (with all the required files) file into the bundle.js.
+  
 
+  
 ## Performance
 I implemented the following techniques to improve the performance of the application. These were all tested on a very slow connection (2G) so that I could measure the speed in a more precise way:
   
@@ -63,6 +69,8 @@ I implemented the following techniques to improve the performance of the applica
 ![screenshot](screens/5cssdes.png)
 ![screenshot](screens/5cssmob.png)  
 *The rating didn't actually change from start to end because the application wasn't that slow to start with. However we did see it improve in speed and usability because I tested it on a 2G network.*  
+  
+
 
 ## Service worker
 
