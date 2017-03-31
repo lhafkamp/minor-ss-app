@@ -1,11 +1,11 @@
 # Movie app
 Assignment to make a server side app with certain performance techniques and a service worker. I used the <a href="https://www.themoviedb.org/">"https://www.themoviedb.org/"</a> API to fetch the movies.
 
-![screenshot](screens/home.png)
+![screenshot](screens/home.png)  
 Search for any movie  
-![screenshot](screens/results.png)
+<img src="screens/results.png" width="450">  
 Get your results  
-![screenshot](screens/zoom.png)
+<img src="screens/zoom.png" width="450">  
 Get more information  
   
   
