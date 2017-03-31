@@ -3,9 +3,11 @@ Assignment to make a server side app with certain performance techniques and a s
 
 ![screenshot](screens/home.png)  
 Search for any movie  
-<img src="screens/results.png" width="450">  
+<br>
+<img src="screens/results.png" width="600">  
 Get your results  
-<img src="screens/zoom.png" width="450">  
+<br>
+<img src="screens/zoom.png" width="600">  
 Get more information  
   
   
