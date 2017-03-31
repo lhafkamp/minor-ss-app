@@ -3,6 +3,22 @@ Assignment to make a server side app with certain performance techniques and a s
 
 ![screenshot](screens/home.png)
 
+## Intro
+I created a new API because I didn't like the fact that Funda will pull their API eventually. This way I can look back at my project in a few months and see what I could've done better and maybe try to improve it.
+
+I tried to relearn Node.js in these 2 weeks so it took me a lot of time to get things up and running while learning about new tooling like <a href="browserify.org">Browserify</a> and <a href="http://requirejs.org/docs/commonjs.html">Common.js</a>. I also implemented a service worker so my site shows a couple of files/pages without internet connection.
+
+## Build
+
+The current `.env` is hidden from GitHub. Make sure you add an `.env` file with the following API key:  
+`API_KEY={yourAPIKEYhere}`.
+
+To use the app run `npm install` and then `npm start` to start the server on port `9000`.
+ 
+
+## Tooling
+
+
 ## Performance
 I implemented the following techniques to improve the performance of the application. These were all tested on a very slow connection (2G) so that I could measure the speed in a more precise way:
   
@@ -31,13 +47,9 @@ I implemented the following techniques to improve the performance of the applica
 ![screenshot](screens/5cssdes.png)
 ![screenshot](screens/5cssmob.png)  
 *The rating didn't actually change from start to end because the application wasn't that slow to start with. However we did see it improve in speed and usability because I tested it on a 2G network.*  
-  
-## Build
 
-The current `.env` is hidden from GitHub. Make sure you add an `.env` file with the following API key:  
-`API_KEY={yourAPIKEYhere}`.
+## Service worker
 
-To use the app run `npm install` and then `npm start` to start the server on port `9000`.
 
 ## Sources
 <a href="https://www.themoviedb.org/">"https://www.themoviedb.org/"</a>  
