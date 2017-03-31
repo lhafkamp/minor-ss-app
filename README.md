@@ -13,8 +13,11 @@ I tried to relearn Node.js in these 2 weeks so it took me a lot of time to get t
 The current `.env` is hidden from GitHub. Make sure you add an `.env` file with the following API key:  
 `API_KEY={yourAPIKEYhere}`.
 
-To use the app run `npm install` and then `npm start` to start the server on port `9000`.
- 
+To use the app you need to run the following commands:  
+- `npm install` to install the Node dependencies  
+- `npm start` to start the server on port `9000`  
+- `npm run expose` to run <a href="https://ngrok.com/">ngrok</a> to expose the application to the web (optional)
+  
 
 ## Tooling
 In order to use 'require' client side I used Browserify to make 1 bundle.js which combines all the Javascript files.
