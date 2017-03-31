@@ -24,7 +24,7 @@ To run the application:
 git clone
 ```
   
-The current `<a href="https://www.npmjs.com/package/dotenv">.env</a>` is hidden from GitHub. Make sure you add a `<a href="https://www.npmjs.com/package/dotenv">.env</a>` file with the API key.   Example:    
+The current `.env` is hidden from GitHub. Make sure you add a `.env` file with the API key.   Example:  
 `API_KEY=2WE8979wWPuweoiwuer`
   
 To use the app you need to run the following commands:  
